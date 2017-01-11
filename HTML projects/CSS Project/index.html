@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:500" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-wrapper {
+            width: 100%;
+            height: 100px;
+            /*background-color: aliceblue;*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .nav-left {
+            /*background-color: red;*/
+            padding-left: 190px;
+        }
+
+        .nav-right {
+            /*background-color: green;*/
+        }
+
+        .nav-section {
+            height: 100%;
+            width: 50%;
+            float: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-nav ul {
+            height: 100%;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            list-style-type: none;
+            margin-right: 10px;
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #FFFFFF;
+            line-height: 23px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .jumbotron {
+            background-image: url('background.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 50vh;
+            position: relative;
+            z-index: 1;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .header-container {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        =.header-container h1 {
+            color: white;
+        }
+
+        .jumbotron .action-btn {
+            width: 40%;
+            padding: 20px 0;
+            background-color: #BDD537;
+            margin: 0 auto;
+            border-radius: 30px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .jumbotron .action-btn:hover {
+            background-color: green;
+            color: white;
+        }
+
+        .heres-how-it-works-section {
+            height: 35vh;
+            width: 100%;
+            background-color: #F0F0F0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hamburger {
+            display: none;
+            height: 20px;
+            width: 20px;
+            background-color: black;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        .HeaderFont {
+            font-size: 15vh;
+            line-height: 140px;
+            color: white;
+        }
+
+        .OrangeColorFont {
+            color: #FF803A
+        }
+
+        .GreenColorFont {
+            color: #BDD436
+        }
+
+        .WhiteColorFont {
+            color: white;
+        }
+
+        .Bold {
+            font-weight: bold;
+        }
+
+        .container-intro-text {
+            width: 50%;
+            height: 20vh;
+            z-index: 2;
+            position: absolute;
+            text-align: center;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .text-setup {
+            text-align: center;
+            font-size: 24px;
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .toolImage {
+            height: 7vh;
+            width: 7%;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            margin-top: 20vh;
+        }
+
+        .works {
+            align-items: baseline;
+            margin-top: 27vh;
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            line-height: 46px;
+        }
+
+        .ExplanationBoxs {
+            width: 100%;
+            height: 20vh;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .ExplanationBoxs2 {
+            width: 60%;
+            height: 60vh;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20%;
+        }
+
+        .fontSize {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: gray;
+            line-height: 25px;
+        }
+
+        .font2 {
+            font-size: 14px;
+            line-height: 20px;
+            color: #BDD537;
+            text-align: center;
+        }
+
+        .box {
+            width: 33.3333333333333333%;
+            height: 58vh;
+            border-left: 1px solid #d3d3d3;
+            border-right: 1px solid #d3d3d3;
+        }
+
+        .toolImage2 {
+            text-align: center;
+        }
+
+        .toolImage3 {
+            text-align: center;
+            border-left: 1px;
+            border-right: 1px;
+        }
+
+        .toolImage4 {
+            text-align: center;
+        }
+
+        .helpsection {
+            display: flex;
+            height: 130vh;
+            width: 100%;
+            margin-top: 1%
+        }
+
+        .help {
+            width: 100%;
+            height: 83vh;
+            text-align: center;
+            background-color: #F0F0F0;
+            margin: auto;
+            margin-top: 20%;
+        }
+
+        .OuterBox {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .CollumBox {
+            flex-direction: row;
+            display: flex;
+            justify-content: space-around;
+            height: 71vh;
+            width: 80%;
+            align-items: center;
+            align-content: stretch;
+            background-color: #F0F0F0;
+        }
+
+        .Collum1 {
+            height: 70vh;
+            width: 35%;
+            background-color: #F0F0F0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: -25%;
+        }
+
+        .Repair {
+            height: 24%;
+            width: 98%;
+            background-color: white;
+            margin-bottom: 5%;
+        }
+
+        .Develop {
+            height: 29%;
+            width: 98%;
+            background-color: white;
+            margin-bottom: 5%;
+        }
+
+        .Build {
+            height: 33%;
+            width: 98%;
+            background-color: white;
+        }
+
+        .Collum2 {
+            height: 70vh;
+            width: 35%;
+            background-color: #F0F0F0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: -5%;
+        }
+
+        .technology {
+            height: 37%;
+            width: 98%;
+            background-color: white;
+            margin-bottom: 5%;
+        }
+
+        .eCommerce {
+            height: 37%;
+            width: 98%;
+            background-color: white;
+        }
+
+        .row-box {
+            width: 100%;
+            height: 12vh;
+            background-color: #F0F0F0;
+        }
+
+        .row {
+            width: 10%;
+            padding: 20px 0;
+            background-color: #BDD537;
+            margin: 0 auto;
+            border-radius: 30px;
+            cursor: pointer;
+            color: white;
+            height: 5vh;
+            font-weight: bolder;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .Contact {
+            margin: auto;
+        }
+
+        .Companies {
+            height: 8vh;
+            width: 100%;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            line-height: 46px;
+            font-weight: lighter;
+            align-items: stretch;
+        }
+
+        .OuterBox2 {
+            height: 125vh;
+            width: 100%;
+        }
+
+        .OtherCompanies {
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+
+        .Third-Party1 {
+            height: 45vh;
+            width: 33.333333%;
+            background-color: gray;
+        }
+
+        .Third-Party2 {
+            height: 45vh;
+            width: 33.333333%;
+            background-color: black;
+        }
+
+        .Third-Party3 {
+            height: 45vh;
+            width: 33.333333%;
+            background-color: red;
+        }
+
+        .Third-Party4 {
+            height: 45vh;
+            width: 33.333333%;
+            background-color: green;
+        }
+
+        .Third-Party5 {
+            height: 45vh;
+            width: 33.333333%;
+            background-color: blue;
+        }
+
+        .Third-Party6 {
+            height: 45vh;
+            width: 33.333333%;
+            background-color: yellow;
+        }
+
+        .LetsTalk {
+            height: 30vh;
+            width: 100%;
+            background-color: #40666D;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .WideOpenTech {
+            text-align: left;
+            margin-left: auto;
+            font-family: 'Lato', sans-serif;
+            font-size: 28px;
+            line-height: 31px;
+            color: white;
+        }
+
+        .EmailUs {
+            width: 8%;
+            padding: 20px 0;
+            background-color: #BDD537;
+            margin: 0 auto;
+            border-radius: 30px;
+            cursor: pointer;
+            color: white;
+            height: 5vh;
+            font-weight: bolder;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+        }
+
+        @media (max-width: 1200px) {
+            .nav-wrapper .main-nav {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .jumbotron .action-btn {
+                width: 200px;
+            }
+            .HeaderFont {
+                font-size: 100px;
+                line-height: 90;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="nav-wrapper">
+        <div class="nav-left nav-section">
+
+            <img class="logo" src="wot-logo-whitex2.png" alt="">
+
+        </div>
+        <div class="nav-right nav-section">
+            <nav class="main-nav">
+                <ul>
+                    <li>Services</li>
+                    <li>Company</li>
+                    <li>Portfolio</li>
+                    <li>Careers</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+
+            <div class="hamburger"></div>
+        </div>
+    </section>
+
+    <section class="jumbotron">
+
+        <div class="header-container">
+            <h1 class="WhiteColorFont">Your Digital </h1>
+            <h1><em class ="HeaderFont">Workshop</em></h1>
+            <h3 class="WhiteColorFont">Building Business<span class = "OrangeColorFont"> Solutions</span> & Bright <span class = "GreenColorFont">Ideas</span></h3>
+            <div class="action-btn">Learn More</div>
+
+        </div>
+
+    </section>
+    <section class="heres-how-it-works-section">
+        <div class="container-intro-text">
+            <p class="text-setup">Wide Open Technologies brings enterprise-level technology to small and mid-sized companies – building the digital technology that solves unique problems, works better and turns ideas into functional reality</p>
+            <img class="toolImage" src="tool1.png" alt=""> </img>
+            <p class="works">HERE'S HOW IT <span class="GreenColorFont Bold"> WORKS</p>
+
+        </div>
+
+    </section>
+    <main>
+
+        <section>
+          <div class = "ExplanationBoxs">
+            <div class = "ExplanationBoxs2">
+            <div class = "box">
+
+   <img class="toolImage2" src="tool2.png" alt="">
+
+   <p class = "fontSize">Bring Your Business
+Ideas, Problems, Challenges or Dreams to Wide Open.</p>
+
+<p class = "font2"> Learn About Our Services</p>
+
+  </img>
+</div>
+
+  <div class = "box">
+
+    <img class="toolImage3" src="tool3.png" alt="">
+
+    <p class = "fontSize">Wide Open's tight knit team of
+experts becomes your team of
+experts, advising you on the
+most effective, efficient solution.</p>
+
+<p class = "font2"> Learn About Our Company</p>
+
+</div>
+<div class = "box">
+
+<img class="toolImage4" src="tool4.png" alt="">
+
+<p class = "fontSize">Wide Open constructs,
+implements and maintains
+your amazing new technology
+and makes your life easier.</p>
+
+<p class = "font2"> See Some of the Work We Have Done</p>
+</div>
+
+    </div>
+</div>
+        </section>
+
+
+        <section class = "helpsection">
+     <div class = "help">
+<h2 class = "HelpFont">HOW CAN WE <span = class "GreenColorFont">HELP?</span></h2>
+                <h6>Here are just a few of the ways Wide Open can help you and your business</h6>
+                <div class="OuterBox">
+                    <div class="CollumBox">
+                        <div class="Collum1">
+                            <div class="Repair">
+                                <p> Repair or modify existing software</p>
+                            </div>
+                            <div class="Develop">
+                                <p> Develop a mobile app with real revenue potential</p>
+                                <p>Make an impact on any device</p>
+                            </div>
+                            <div class="Build">
+                                <p>Build functional prototypes for entrepreneurs</p>
+                                <p>Have a digital idea? We turn it into something you can show investors.</p>
+                            </div>
+                        </div>
+                        <div class="Collum2">
+                            <div class="technology">
+                                <p> Be your multi-talented technology department </p>
+                                <p> Rely on us for consistent management and maintenance of the digital side of your business.</p>
+                            </div>
+                            <div class="eCommerce">
+                                <p> Make eCommerce work for you and your clients</p>
+                                <p> Customized functionality tailored to your business</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="row-box">
+                    <div class="row">
+                        <p class="Contact"> Contact Us </p>
+
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="Companies-Outer-Box">
+        <h1 class="Companies">COMPANIES WE WORK WITH</h1>
+        <div class="OuterBox2">
+            <div class="OtherCompanies">
+                <div class="Third-Party1">
+                    <img src="AM-portfolio.png" height="100%" width="100%">
+                </div>
+                <div class="Third-Party2">
+                    <img src="KF-portfolio.png" height="100%" width="100%">
+                </div>
+                <div class="Third-Party3">
+                    <img src="VG-portfolio.png" height="100%" width="100%">
+                </div>
+                <div class="Third-Party4">
+                    <img src="NCMA-portfolio.png" height="100%" width="100%">
+                </div>
+                <div class="Third-Party5">
+                    <img src="CI-portfolio.png" height="100%" width="100%">
+                </div>
+                <div class="Third-Party6">
+                    <img src="TS-portfolio.png" height="100%" width="100%">
+                </div>
+            </div>
+            <div class="LetsTalk">
+                <p class="WideOpenTech"> Let's Talk About How <br />Wide Open Tech Can Help Your Business</p>
+                <div class="EmailUs"> Email Us</div>
+            </div>
+
+        </div>
+    </section>
+    <section></section>
+    <section></section>
+    <section></section>
+    </main>
+    <footer>
+
+
+    </footer>
+
+</body>
+
+</html>
+
+
+
+</footer>
+
+</body>
+
+</html>
