@@ -1,0 +1,38 @@
+<DOCTYPE html>
+    <html ng-app="myApp">
+
+    <head>
+
+
+
+
+    </head>
+
+    <body ng-controller='mainController'>
+        <h1>Groceries</h1>
+        <ul>
+            <li ng-repeat="grocery in groceries ">
+                <p ng-click="addItemToCart(grocery)">
+                    {{grocery.name}}</p>
+            </li>
+        </ul>
+        <div>
+            <h1>Your Cart:</h1>
+            <p>Total: {{total()}}</p>
+            <ul>
+                <li ng-repeat="item in cart track by $index">{{item.name}}</li>
+            </ul>
+        </div>
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+    </html>
